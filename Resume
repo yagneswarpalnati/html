@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yagneswar Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>   
+        body{
+            margin: 0%;
+            background-image: url(https://media.istockphoto.com/id/1270080274/photo/abstract-ray-light-background-gray-gradient-blurred-studio-room.jpg?b=1&s=612x612&w=0&k=20&c=XT5JkJNzfo88ErsbVKptuYQoJfVDYsfRHltc2dleiqE=);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .upper{
+            background-color: #804674;
+        }     
+        h1{
+            margin: 0%;
+            font-size: 50px;
+            text-align: center;
+            font-weight: 200px;
+            color: rgb(247, 243, 239);
+        }
+        .top{
+            padding: 0.5em;
+            margin: 0%;
+            text-align: center;
+            color: rgb(247, 243, 239);
+        }
+        .profile{
+            height: 180px;
+            width: auto;
+            position: absolute;
+            right:10px;
+            top:20px;
+        }
+        h2{
+            text-align: center;
+            color:#2E4F4F;
+            font-weight: 450;
+            font-family: 'Sacramento', cursive;
+        }
+        p{
+            margin-left: 30px;
+            font-size: 18px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+        .imgstyle{
+            height:65px;
+            position: relative;
+            margin-left: 30%;
+            display: inline-block;
+        }
+        .bottom{
+            background-color: #393053;
+        }
+
+
+        
+    
+    </style>
+</head>
+<body style="height:100%">
+    <div class="upper">
+        <h1>
+            PALNATI YAGNESWAR
+        </h1>
+        <h2 class="top">
+            ARTIFICIAL INTELLIGENCE AND DATA SCIENCE STUDENT
+        </h2>
+        <img src="tinku-modified.png" alt="tinku" class="profile">
+    </div>
+    <div class="middle">
+        <h2>
+            ABOUT ME:
+        </h2>
+        <p>
+            Hello! My self Yagneswar <img src="https://em-content.zobj.net/thumbs/72/google/350/waving-hand_1f44b.png" alt="handwaving" style="height: 20px;"><br>
+            Student at SRKREC BHIMAVARAM. <img src="https://em-content.zobj.net/thumbs/120/whatsapp/326/open-book_1f4d6.png" alt="book" style="height:20px;">
+        </p>
+        <h2>SKILLS:</h2>
+        <h2>LANGUAGES KNOWN-</h2>
+        <table width="85%">
+            <tr>
+                <td align="right">
+                    <img src="https://brandlogos.net/wp-content/uploads/2020/12/python-logo.png" alt="Python" class="imgstyle" style="height:70px">
+                </td>
+
+                <td align="left">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png" alt="Java" class="imgstyle">
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><img src="https://brandeps.com/logo-download/C/C++-logo-vector-01.svg" alt="C++" class="imgstyle"></td>
+                <td>
+                    <img src="https://i.pinimg.com/originals/6e/46/e7/6e46e7dbe2bb73dacc055e5dbd85c3ad.png" alt="C" class="imgstyle">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <img src="https://brandeps.com/logo-download/H/HTML-5-logo-vector-01.svg" alt="HTML" class="imgstyle">
+                </td>
+                <td>
+                    <img src="https://brandeps.com/logo-download/C/CSS-3-logo-vector-01.svg" alt="CSS" class="imgstyle">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="bottom">
+        <h2 style="font-family: 'Alkatra', cursive;color:#E3DFFD;margin-bottom:0%">
+            CONNECT WITH ME:
+        </h2>
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github" style="height: 50px;margin-left:40%">
+        <img src="https://www.iconpacks.net/icons/2/free-linkedin-logo-icon-2430-thumb.png" alt="linkedIn" style="height:55px;margin-left:5%">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxDpGL4bgNk3JUx3jFr_J1myjiALm3qgQYyQ&usqp=CAU" alt="telegram" style="height: 50px;margin-left:5%">
+        <p style="font-family: 'Dancing Script', cursive;color:#E5E0FF">@PALNATI YAGNESWAR</p>
+    </div>
+    
+</body>
+</html>
