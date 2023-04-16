@@ -1,0 +1,199 @@
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Blurry Loading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="left-slider">
+            <div style="background-color: yellow;">
+                <h1>CSK</h1>
+                <p>Chennai Super Kings</p>
+            </div>
+            <div style="background-color: orange;">
+                <h1>SRH</h1>
+                <p>Sunrisers Hyderabad</p>
+            </div>
+            <div style="background-color: red;">
+                <h1>RCB</h1>
+                <p>Royal Challengers Bangalore</p>
+            </div>
+            <div style="background-color: blue;">
+                <h1>MI</h1>
+                <p>Mumbai Indians</p>
+            </div>
+            <div style="background-color: red;">
+                <h1>PBKS</h1>
+                <p>Punjab Kings</p>
+            </div>
+            <div style="background-color: skyblue;">
+                <h1>DC</h1>
+                <p>Delhi Capitals</p>
+            </div>
+            <div style="background-color: pink;">
+                <h1>RR</h1>
+                <p>Rajesthan Royals</p>
+            </div>
+        </div>
+        <div class="right-slider">
+            <div style="background-image: url('https://static.toiimg.com/thumb/msid-72902484,width-400,resizemode-4/72902484.jpg');"></div>
+            <div style="background-image: url('https://pixlok.com/wp-content/uploads/2021/01/DC_Logo_With_Background.jpg');"></div>
+            <div style="background-image: url('https://i.pinimg.com/originals/ad/c5/fe/adc5fe8570e3fbe976e743c7589cf719.jpg');"></div>
+            <div style="background-image: url('https://i.pinimg.com/originals/29/2b/d5/292bd5c291ff709c415928ff94454259.png');"></div>
+            <div style="background-image: url('https://gumlet.assettype.com/swarajya/2020-09/f2ce0bfa-f66e-4a9b-8e89-8d8d4bcc8cac/rcb.jpg');"></div>
+            <div style="background-image: url('https://i.pinimg.com/originals/b7/7d/f5/b77df59b1a5f0f209b94a0148ddb02d5.jpg');"></div>
+            <div style="background-image: url('https://hindi.cricketaddictor.com/wp-content/uploads/2022/01/CSK-1.jpg');"></div>
+        </div>
+        <div class="action-button">
+            <button class="down-arrow">
+                <i class="fa fa-arrow-down"></i>
+            </button>
+            <button class="up-arrow">
+                <i class="fa fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+    <script src="first.js"></script>
+</body>
+</html>
+
+
+CSS
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Open Sans',sans-serif;
+    height: 100vh;
+
+}
+
+.slider-container{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-slider{
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: transform .5s ease-in-out;
+}
+
+.left-slider > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.left-slider h1{
+    font-size: 65px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.left-slider p{
+    font-weight: 600;
+}
+
+.right-slider{
+    position: absolute;
+    height: 100%;
+    top:0;
+    left:35%;
+    width: 65%;
+    transition: transform .5s ease-in-out;
+}
+
+.right-slider > div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.slider-container .action-button button{
+    position: absolute;
+    left:35%;
+    top:50%;
+    z-index: 100;
+}
+
+.slider-container .action-button .down-arrow{
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-button .up-arrow{
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+button
+{
+    padding:15px;
+    color: gray;
+    border-color: white;
+}
+
+
+JAVA SCRIPT
+
+const sliderContainer=document.querySelector('.slider-container');
+const slideRight=document.querySelector('.right-slider');
+const sliderLeft=document.querySelector('.left-slider');
+const upBotton=document.querySelector('.up-arrow');
+const downBotton=document.querySelector('.down-arrow');
+const slidesLength=slideRight.querySelectorAll('div').length;
+
+let activeSlideIndex=0
+
+sliderLeft.style.top = `-${(slidesLength-1)*100}vh`;
+
+upBotton.addEventListener('click',()=>changeSlide('up'))
+downBotton.addEventListener('click',()=>changeSlide('down'))
+
+const changeSlide = (direction)=>{
+    const sliderHeight=sliderContainer.clientHeight
+    if(direction==='up'){
+        activeSlideIndex++
+        if(activeSlideIndex > slidesLength-1){
+            activeSlideIndex=0
+        }
+    }
+    else if(direction==='down'){
+        activeSlideIndex--
+        if(activeSlideIndex < 0)
+        {
+            activeSlideIndex=slidesLength-1
+        }
+    }
+    slideRight.style.transform = `translateY(-${activeSlideIndex*sliderHeight}px)`
+    sliderLeft.style.transform = `translateY(${activeSlideIndex*sliderHeight}px)`
+
+}
